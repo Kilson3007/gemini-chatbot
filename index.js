@@ -89,7 +89,7 @@ Seu objetivo é criar uma experiência de conversação agradável, útil e que 
 // Tópicos de conversas humanizados para o Atlas
 const atlasConversationTopics = {
   saudacoes: [
-    { pergunta: "Olá", resposta: "Olá! Tudo bem?" },
+    { pergunta: "Olá ou ola", resposta: "Olá! Tudo bem?" },
     { pergunta: "Oi", resposta: "Oi! Como posso ajudar hoje?" },
     { pergunta: "Bom dia", resposta: "Bom dia! Como está o dia até agora?" },
     { pergunta: "Boa tarde", resposta: "Boa tarde! Como está sendo o dia?" },
@@ -106,8 +106,8 @@ const atlasConversationTopics = {
   despedidas: [
     { pergunta: "Adeus", resposta: "Adeus! Foi bom conversar. Volte sempre que precisar!" },
     { pergunta: "Tchau", resposta: "Tchau! Se precisar de mais alguma coisa é só chamar!" },
-    { pergunta: "Até logo", resposta: "Até logo! Estarei aqui quando voltar." },
-    { pergunta: "Até mais", resposta: "Até mais! Tenha um excelente dia!" }
+    { pergunta: "Até logo ou ate logo", resposta: "Até logo! Estarei aqui quando voltar." },
+    { pergunta: "Até mais ou ate mais", resposta: "Até mais! Tenha um excelente dia!" }
   ],
   
   agradecimentos: [
