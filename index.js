@@ -514,6 +514,11 @@ app.use(express.json({ limit: payloadLimit }));
 app.use(express.urlencoded({ limit: payloadLimit, extended: true }));
 app.use(express.static('public'));
 
+// Rota para a página principal
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Rota para processar as mensagens do chat
 app.post('/chat', async (req, res) => {
   try {
