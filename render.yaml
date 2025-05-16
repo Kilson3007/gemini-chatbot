@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: gemini-chatbot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    healthCheckPath: /api-status
+    envVars:
+      - key: GEMINI_API_KEY
+        value: AIzaSyACBzVea3rvInMNZub507WcAeRm1se4kgM
+      - key: PORT
+        value: 10000
+      - key: GEMINI_MODEL
+        value: gemini-1.5-flash
+      - key: PAYLOAD_LIMIT
+        value: 150mb
+      - key: NODE_ENV
+        value: production 
