@@ -512,7 +512,7 @@ async function generateContentWithRetry(prompt, maxRetries = 5) {
 const app = express();
 app.use(express.json({ limit: payloadLimit }));
 app.use(express.urlencoded({ limit: payloadLimit, extended: true }));
-app.use(express.static('public'));
+app.use(express.static('./'));
 
 // Rota para a página principal
 app.get('/', (req, res) => {
@@ -927,6 +927,16 @@ app.get('/api-status', async (req, res) => {
       error: error.message
     });
   }
+});
+
+// Rota para servir arquivos CSS
+app.get('/style.css', (req, res) => {
+  res.sendFile(path.join(__dirname, 'style.css'));
+});
+
+// Rota para servir arquivos JavaScript
+app.get('/script.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'script.js'));
 });
 
 // Iniciar o servidor
