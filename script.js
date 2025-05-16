@@ -974,8 +974,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         utterance.lang = 'pt-BR';
-        utterance.rate = 1.6;
-        utterance.pitch = 1.6;
+        utterance.rate = 1.3;
+        utterance.pitch = 1.3;
         
         // Adicionar evento para quando a fala terminar
         utterance.onend = function() {
