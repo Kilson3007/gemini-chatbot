@@ -516,7 +516,7 @@ app.use(express.static('public'));
 
 // Rota para a página principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Rota para processar as mensagens do chat
