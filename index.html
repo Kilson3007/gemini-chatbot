@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#4285F4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Atlas - Assistente Virtual desenvolvido por Eng. Joaquim Pascoal">
+    <title>Atlas - Assistente Virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adicionando ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-title">
+                <h1>Atlas</h1>
+                <p class="subtitle">Assistente Virtual</p>
+            </div>
+            <div class="header-toggles">
+                <!-- Botão para ativar/desativar fala automática -->
+                <div class="speech-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="auto-speak-toggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Falar respostas</span>
+                </div>
+                <!-- Botão para ativar/desativar modo de conversação contínua -->
+                <div class="realtime-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="realtime-mode-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Modo conversa</span>
+                </div>
+            </div>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot">
+                <div class="bot-avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-6h10v2H7zm0-4h10v2H7z"/>
+                    </svg>
+                </div>
+                <div class="message-content">Olá! Sou Atlas, seu assistente virtual desenvolvido por Joaquim Pascoal. Como posso ajudar você hoje? Você pode digitar ou usar o botão de microfone para falar (a função de voz precisa de permissão do seu navegador).</div>
+            </div>
+            <div class="message bot">
+                <div class="bot-avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-6h10v2H7zm0-4h10v2H7z"/>
+                    </svg>
+                </div>
+                <div class="message-content">💡 <b>Dica para reconhecimento de voz no celular:</b> Se o botão de microfone não funcionar, toque no botão 🎹 para usar o teclado nativo. Em alguns aparelhos Android/iPhone, você pode tocar no microfone do teclado nativo para ditar texto.</div>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <div class="file-upload-container">
+                <input type="file" id="file-upload" accept="image/*,.pdf" style="display: none;">
+                <button id="file-upload-button" title="Enviar imagem ou PDF">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+            </div>
+            <input type="text" id="user-input" placeholder="Digite sua mensagem aqui...">
+            <button id="voice-input-button" title="Falar para digitar">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button id="send-button">Enviar</button>
+        </div>
+        <div id="preview-container" class="preview-container" style="display: none;">
+            <div class="preview-content">
+                <img id="image-preview" style="display: none; max-width: 100%; max-height: 200px;">
+                <div id="pdf-preview" style="display: none;">
+                    <i class="fas fa-file-pdf"></i>
+                    <span id="pdf-name"></span>
+                </div>
+                <button id="remove-file" class="remove-file">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="developer-info">
+            <p>Desenvolvido por Eng. Joaquim Pascoal - ISTM</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

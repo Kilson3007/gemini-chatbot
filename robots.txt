@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /chat
+Disallow: /session
+Disallow: /api-status
+Allow: / 
