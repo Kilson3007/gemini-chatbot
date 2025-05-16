@@ -909,30 +909,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Adicionar um botão alternativo também nesse caso
-        const chatInputContainer = document.querySelector('.chat-input-container');
-        const nativeSpeechButton = document.createElement('button');
-        nativeSpeechButton.id = 'native-speech-button';
-        nativeSpeechButton.title = 'Usar teclado de voz nativo';
-        nativeSpeechButton.innerHTML = '<i class="fas fa-keyboard"></i>';
-        nativeSpeechButton.style.marginLeft = '5px';
-        nativeSpeechButton.style.backgroundColor = '#9E9E9E';
-        nativeSpeechButton.style.color = 'white';
-        nativeSpeechButton.style.border = 'none';
-        nativeSpeechButton.style.borderRadius = '30px';
-        nativeSpeechButton.style.width = '40px';
-        nativeSpeechButton.style.height = '40px';
-        nativeSpeechButton.style.display = 'flex';
-        nativeSpeechButton.style.justifyContent = 'center';
-        nativeSpeechButton.style.alignItems = 'center';
-        
-        nativeSpeechButton.addEventListener('click', () => {
-            // Focar no input para ativar o teclado com recurso de voz nativo
-            userInput.focus();
-            alert('Use o botão de microfone do seu teclado para ditar texto');
-        });
-        
-        chatInputContainer.insertBefore(nativeSpeechButton, sendButton);
+        // Removemos o botão alternativo para deixar a interface mais limpa
+        // Usuários móveis podem usar o teclado nativo com microfone integrado
     }
     
     // Configuração para síntese de voz
