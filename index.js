@@ -10,7 +10,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Configuração da API Gemini
-const apiKey = process.env.GEMINI_API_KEY || 'AIzaSyACBzVea3rvInMNZub507WcAeRm1se4kgM'; // Sua chave API do Gemini
+const apiKey = process.env.GEMINI_API_KEY || 'AIzaSyAmc1iWlU05BksKefJAUPDr9PD1ls5ZOKk'; // Sua chave API do Gemini
 
 // Definir limites de payload a partir das variáveis de ambiente ou usar padrão
 const payloadLimit = process.env.PAYLOAD_LIMIT || '150mb';
@@ -120,8 +120,8 @@ const atlasConversationTopics = {
     { pergunta: "Quem és tu?", resposta: "Eu sou o Atlas, um assistente virtual desenvolvido pelo Engenheiro Joaquim Pascoal para te ajudar com informações e tarefas." },
     { pergunta: "O que podes fazer?", resposta: "Posso responder perguntas, processar documentos, analisar imagens e conversar contigo sobre diversos assuntos. Como posso te ajudar hoje?" },
     { pergunta: "Como funcionas?", resposta: "Funciono através de um modelo de linguagem treinado para entender e gerar texto natural. Posso processar o que me dizes e tentar fornecer respostas úteis." },
-    { pergunta: "Quem te criou", resposta: "Fui desenvolvido pelo Engenheiro Informático Joaquim Pascoal, que se formou em engenharia informática pelo ISTM." },
-    { pergunta: "Quem te desenvolveu", resposta: "Fui desenvolvido pelo Engenheiro Informático Joaquim Pascoal, que investiu bastante tempo e conhecimento na minha criação." }
+    { pergunta: "Quem te criou", resposta: "Fui desenvolvido pelo Engenheiro Informático Joaquim Pascoal, formado em engenharia informática pelo ISTM." },
+    { pergunta: "Quem te desenvolveu", resposta: "Fui desenvolvido pelo Engenheiro Informático Joaquim Pascoal, que investiu bastante tempo e conhecimento no meu desenvolvimento." }
   ],
   
   humor: [
@@ -1040,3 +1040,4 @@ function splitTextIntoChunks(text, maxChunkSize) {
     
     return chunks;
 } 
+
