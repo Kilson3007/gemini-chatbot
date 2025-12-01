@@ -32,7 +32,7 @@ const genAI = new GoogleGenerativeAI(apiKey, {
 
 // Configuração do modelo
 // Usando gemini-1.5-flash em vez de gemini-1.5-pro para reduzir consumo de cota
-const modelName = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+const modelName = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const model = genAI.getGenerativeModel({ 
   model: modelName,
   generationConfig: {
@@ -1040,4 +1040,5 @@ function splitTextIntoChunks(text, maxChunkSize) {
     
     return chunks;
 } 
+
 
