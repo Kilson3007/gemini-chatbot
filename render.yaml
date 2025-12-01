@@ -8,12 +8,13 @@ services:
     healthCheckPath: /api-status
     envVars:
       - key: GEMINI_API_KEY
-        value: AIzaSyACBzVea3rvInMNZub507WcAeRm1se4kgM
+        value: AIzaSyAsJt-PrZy6TJSCYx19v5fricl8S0ArHgc
       - key: PORT
         value: 10000
       - key: GEMINI_MODEL
-        value: gemini-1.5-flash
+        value: gemini-2.5-flash
       - key: PAYLOAD_LIMIT
         value: 150mb
       - key: NODE_ENV
+
         value: production 
