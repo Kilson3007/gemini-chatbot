@@ -10,7 +10,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Configuração da API Gemini
-const apiKey = process.env.GEMINI_API_KEY || 'AIzaSyAmc1iWlU05BksKefJAUPDr9PD1ls5ZOKk'; // Sua chave API do Gemini
+const apiKey = process.env.GEMINI_API_KEY || 'AIzaSyAsJt-PrZy6TJSCYx19v5fricl8S0ArHgc'; // Sua chave API do Gemini
 
 // Definir limites de payload a partir das variáveis de ambiente ou usar padrão
 const payloadLimit = process.env.PAYLOAD_LIMIT || '150mb';
@@ -1040,5 +1040,6 @@ function splitTextIntoChunks(text, maxChunkSize) {
     
     return chunks;
 } 
+
 
 
